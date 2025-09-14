@@ -4,7 +4,7 @@ import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  base: './', // Changed to relative path for Vercel
   server: {
     host: '0.0.0.0',
     port: 5173,
@@ -34,8 +34,15 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash][extname]',
       },
     },
-    minify: 'esbuild',
+    // Ensure proper module loading in production
     target: 'esnext',
+    modulePreload: {
+      polyfill: false,
+    },
+    commonjsOptions: {
+      esmExternals: true,
+    },
+    minify: 'esbuild',
   },
   resolve: {
     alias: {
