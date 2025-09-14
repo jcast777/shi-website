@@ -2,12 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SmartHome Innovations</title>
+    <base href="/" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // This helps with client-side routing in production
+      window.addEventListener('load', () => {
+        const root = document.getElementById('root');
+        if (!root?.innerHTML) {
+          window.location.href = '/index.html';
+        }
+      });
+    </script>
   </body>
 </html>
