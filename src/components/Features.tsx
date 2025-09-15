@@ -43,7 +43,7 @@ const FeatureCard = ({ feature, index }: { feature: typeof features[0], index: n
 const Features = () => {
   return (
     <section id="features" className="bg-background text-text py-20 md:py-28">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container-fluid mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center max-w-3xl mx-auto mb-16"
           initial={{ opacity: 0, y: 20 }}

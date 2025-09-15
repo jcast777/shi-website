@@ -117,7 +117,7 @@ const ProductCard = ({ product }: { product: typeof products[0] }) => {
 const ProductGrid = () => {
   return (
     <section id="products" className="section bg-white">
-      <div className="container">
+      <div className="container-fluid p-8 sm:px-6 lg:px-12">
         <motion.h2 
           className="section-title"
           initial={{ opacity: 0, y: 20 }}

@@ -109,7 +109,7 @@ const Testimonials = () => {
 
   return (
     <section id="testimonials" className="section bg-white">
-      <div className="container">
+      <div className="container-fluid p-8 sm:px-6 lg:px-12">
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -146,14 +146,14 @@ const Testimonials = () => {
             className="absolute left-4 top-1/2 -translate-y-1/2 bg-white w-10 h-10 rounded-full shadow-md flex items-center justify-center text-primary-600 hover:bg-primary-50 transition-colors"
             aria-label="Previous testimonial"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-6 h-6" color='rgb(26 26 26)'/>
           </button>
           <button 
             onClick={nextSlide}
             className="absolute right-4 top-1/2 -translate-y-1/2 bg-white w-10 h-10 rounded-full shadow-md flex items-center justify-center text-primary-600 hover:bg-primary-50 transition-colors"
             aria-label="Next testimonial"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-6 h-6" color='rgb(26 26 26)'/>
           </button>
           
           <div className="absolute bottom-6 left-0 right-0 flex justify-center space-x-2">

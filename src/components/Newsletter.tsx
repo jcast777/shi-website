@@ -28,8 +28,8 @@ const Newsletter = () => {
   };
 
   return (
-    <section className="bg-primary-600 text-white py-16">
-      <div className="container">
+    <section id="newsletter" className="bg-primary-600 text-white py-16">
+      <div className="container-fluid mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
